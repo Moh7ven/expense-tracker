@@ -17,7 +17,14 @@ export function ExpenseTotal(props) {
       </div>
       <div className="row">
         <div className={`col ${s.label}`}>Remaining money</div>
-        <div className={`col ${s.amount}`}>{remainingMoney} €</div>
+        {remainingMoney && (
+          <div
+            className={`col ${s.amount}`}
+            style={{ color: remainingMoney < 0 ? "red" : "green" }}
+          >
+            {remainingMoney} €
+          </div>
+        )}
       </div>
     </div>
   );

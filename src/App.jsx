@@ -4,14 +4,17 @@ import { List } from "components/List/List";
 import { useSelector } from "react-redux";
 import { IncomeInput } from "containers/IncomeInput/IncomeInput";
 import { ExpenseTotal } from "containers/ExpenseTotal/ExpenseTotal";
+import { Logo } from "components/Logo/Logo";
 
 export function App() {
   const expenseList = useSelector((store) => store.EXPENSE.expenseList);
   return (
     <div className={s.main_container}>
       <div className={`row ${s.header}`}>
-        <div className={`col-3`}>Logo</div>
-        <div className={`col-9 ${s.income_input}`}>
+        <div className={`col-3`}>
+          <Logo title={"ExpTracker"} subtitle={"Keep track of your expenses"} />
+        </div>
+        <div className={`col-10 col-md-6 col-lg-4 ${s.income_input}`}>
           <IncomeInput />
         </div>
       </div>
