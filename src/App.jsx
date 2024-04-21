@@ -2,7 +2,7 @@ import { ExpenseInput } from "containers/ExpenseInput/ExpenseInput";
 import s from "./style.module.css";
 import { List } from "components/List/List";
 import { useSelector } from "react-redux";
-import { IncomeInput } from "components/IncomeInput/IncomeInput";
+import { IncomeInput } from "containers/IncomeInput/IncomeInput";
 
 export function App() {
   const expenseList = useSelector((store) => store.EXPENSE.expenseList);
